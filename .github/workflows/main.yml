@@ -22,7 +22,7 @@ jobs:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
       - name: Run Playwright tests
-        run: npx playwright test tests/CreateTaskWithAging.spec.js --reporter=json
+        run: npx playwright test --reporter=json
 
       - name: Generate Test Summary Table
         if: always()
