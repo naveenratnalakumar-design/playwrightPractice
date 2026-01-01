@@ -1,0 +1,60 @@
+name: Apex Automated Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest   # choose ONE OS
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+
+      - name: Run Playwright tests
+        run: npx playwright test tests/CreateTaskWithAging.spec.js --reporter=json
+
+      - name: Generate Test Summary Table
+        if: always()
+        run: |
+          echo "## Playwright Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Test File | Test Case Name | Status | Duration (sec) |" >> $GITHUB_STEP_SUMMARY
+          echo "| --------- | -------------- | ------ | -------------- |" >> $GITHUB_STEP_SUMMARY
+
+          node <<'EOF'
+          const fs = require('fs');
+
+          if (!fs.existsSync('playwright-report.json')) {
+            console.log('| N/A | No report found | ❌ | 0 |');
+            process.exit(0);
+          }
+
+          const report = JSON.parse(fs.readFileSync('playwright-report.json', 'utf8'));
+
+          report.suites.forEach(suite => {
+            suite.suites.forEach(fileSuite => {
+              const fileName = fileSuite.file.split('/').pop();
+              fileSuite.specs.forEach(spec => {
+                spec.tests.forEach(test => {
+                  const result = test.results[0];
+                  const status = result.status;
+                  const duration = (result.duration / 1000).toFixed(2);
+                  console.log(
+                    `| ${fileName} | ${spec.title} | ${status} | ${duration} |`
+                  );
+                });
+              });
+            });
+          });
+          EOF >> $GITHUB_STEP_SUMMARY
