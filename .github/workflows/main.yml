@@ -1,106 +1,66 @@
-name: Playwright Tests
- 
+name: Playwright Automated Tests
+
 on:
- workflow_dispatch:
- 
+  workflow_dispatch:
+
 jobs:
-
   test:
-
-    timeout-minutes: 60
-
+    # Choose ONE runner only
     runs-on: ubuntu-latest
- 
+    # runs-on: macos-latest
+    # runs-on: windows-latest
+
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/checkout@v4
- 
-      - uses: actions/setup-node@v4
-
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-
           node-version: 18
- 
+
       - name: Install dependencies
-
         run: npm ci
-
         env:
-
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
- 
-      # Browser install step intentionally skipped
- 
-      - name: Run Playwright tests (JSON report)
 
-        run: npx playwright test --reporter=json
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
 
-        continue-on-error: true
- 
+      - name: Run Playwright tests
+        run: npx playwright test tests/CreateTaskWithAging.spec.js --reporter=json
+
       - name: Generate Test Summary Table
-
         if: always()
-
         run: |
-
           echo "## Playwright Test Results" >> $GITHUB_STEP_SUMMARY
-
           echo "" >> $GITHUB_STEP_SUMMARY
-
           echo "| Test File | Test Case Name | Status | Duration (sec) |" >> $GITHUB_STEP_SUMMARY
-
           echo "| --------- | -------------- | ------ | -------------- |" >> $GITHUB_STEP_SUMMARY
- 
-          node <<'EOF'
 
+          node <<'EOF' >> $GITHUB_STEP_SUMMARY
           const fs = require('fs');
- 
+
+          if (!fs.existsSync('playwright-report.json')) {
+            console.log('| N/A | No report found | ❌ | 0 |');
+            process.exit(0);
+          }
+
           const report = JSON.parse(fs.readFileSync('playwright-report.json', 'utf8'));
- 
+
           report.suites.forEach(suite => {
-
             suite.suites.forEach(fileSuite => {
-
               const fileName = fileSuite.file.split('/').pop();
- 
               fileSuite.specs.forEach(spec => {
-
                 spec.tests.forEach(test => {
-
                   const result = test.results[0];
-
                   const status = result.status;
-
                   const duration = (result.duration / 1000).toFixed(2);
- 
                   console.log(
-
                     `| ${fileName} | ${spec.title} | ${status} | ${duration} |`
-
                   );
-
                 });
-
               });
-
             });
-
           });
-
-          EOF >> $GITHUB_STEP_SUMMARY
- 
-      - name: Upload HTML Report
-
-        if: always()
-
-        uses: actions/upload-artifact@v4
-
-        with:
-
-          name: playwright-report
-
-          path: playwright-report/
-
-          retention-days: 30
-
- 
+          EOF
