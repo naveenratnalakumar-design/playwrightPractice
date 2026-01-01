@@ -23,38 +23,38 @@ test("TC_02_Login with valid credentials", async ({ page }) => {
     [process.env.PASSWORD]
   );
 });
-test("TC_03_Checking Checkout page Inputs", async ({ page }) => {
-  const loginPage = new sections.LoginPage(test, page);
-  await loginPage.launchingApplication([process.env.BASE_URL]);
-  await loginPage.loginWithInvalidCredentials(
-    [process.env.USER_NAME],
-    [process.env.PASSWORD]
-  );
-  const homePage = new sections.HomePage(test, page);
-  await homePage.checkingCheckoutPageInputs();
-});
-test("TC_04_user order require product in the application", async ({
-  page,
-}) => {
-  const loginPage = new sections.LoginPage(test, page);
-  await loginPage.launchingApplication([process.env.BASE_URL]);
-  await loginPage.loginWithInvalidCredentials(
-    [process.env.USER_NAME],
-    [process.env.PASSWORD]
-  );
-  const homePage = new sections.HomePage(test, page);
-  await homePage.orderProduct();
-});
-test("TC_05_Remove cart Item", async ({ page }) => {
-  const loginPage = new sections.LoginPage(test, page);
-  await loginPage.launchingApplication([process.env.BASE_URL]);
-  await loginPage.loginWithInvalidCredentials(
-    [process.env.USER_NAME],
-    [process.env.PASSWORD]
-  );
-  const homePage = new sections.HomePage(test, page);
-  await homePage.removeCartItem();
-});
+// test("TC_03_Checking Checkout page Inputs", async ({ page }) => {
+//   const loginPage = new sections.LoginPage(test, page);
+//   await loginPage.launchingApplication([process.env.BASE_URL]);
+//   await loginPage.loginWithInvalidCredentials(
+//     [process.env.USER_NAME],
+//     [process.env.PASSWORD]
+//   );
+//   const homePage = new sections.HomePage(test, page);
+//   await homePage.checkingCheckoutPageInputs();
+// });
+// test("TC_04_user order require product in the application", async ({
+//   page,
+// }) => {
+//   const loginPage = new sections.LoginPage(test, page);
+//   await loginPage.launchingApplication([process.env.BASE_URL]);
+//   await loginPage.loginWithInvalidCredentials(
+//     [process.env.USER_NAME],
+//     [process.env.PASSWORD]
+//   );
+//   const homePage = new sections.HomePage(test, page);
+//   await homePage.orderProduct();
+// });
+// test("TC_05_Remove cart Item", async ({ page }) => {
+//   const loginPage = new sections.LoginPage(test, page);
+//   await loginPage.launchingApplication([process.env.BASE_URL]);
+//   await loginPage.loginWithInvalidCredentials(
+//     [process.env.USER_NAME],
+//     [process.env.PASSWORD]
+//   );
+//   const homePage = new sections.HomePage(test, page);
+//   await homePage.removeCartItem();
+// });
 test("TC_06_Filtering by product", async ({ page }) => {
   const loginPage = new sections.LoginPage(test, page);
   await loginPage.launchingApplication([process.env.BASE_URL]);

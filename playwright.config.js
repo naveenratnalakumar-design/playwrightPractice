@@ -21,7 +21,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   // Reporter configuration
-reporter: [['./utilites/customHtmlReporter.js']],
+reporter: [["html"]],
   use: {
     // Collect trace only when retrying a failed test
     trace: 'on-first-retry',

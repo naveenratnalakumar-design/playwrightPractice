@@ -28,9 +28,10 @@
       <body>
         <h2>TC_03_Checking Checkout page Inputs</h2>
         <a href="index.html">⬅️ Back to Summary</a>
-        <h3 style="color:red;">❌ Reason: TypeError: zipcode is required error message should have text
-
-(0 , _expectBundle.EXPECTED_COLOR) is not a function</h3>
+        <h3 style="color:red;">❌ Reason: Error: locator.click: Target page, context or browser has been closed
+Call log:
+  [2m- waiting for locator('//div[@id=\'shopping_cart_container\']//*[name()=\'svg\']')[22m
+</h3>
         <h3>📝 Steps:</h3>
         <ul>
           
@@ -44,36 +45,10 @@
           
             <li>click on the addToCart button </li>
           
-            <li>click on the cartIcon button </li>
-          
-            <li>click on the checkout button </li>
-          
-            <li>filling lastName </li>
-          
-            <li>filling lastName </li>
-          
-            <li>click on the continue button </li>
-          
-            <li>First Name is required error message should have text </li>
-          
-            <li>filling firstName </li>
-          
-            <li>filling lastName </li>
-          
-            <li>click on the continue button </li>
-          
-            <li>Last Name is required error message should have text </li>
-          
-            <li>filling firstName </li>
-          
-            <li>filling lastName </li>
-          
-            <li>click on the continue button </li>
-          
-            <li>zipcode is required error message should have text <span style="color:red;">(Failed)</span></li>
+            <li>click on the cartIcon button <span style="color:red;">(Failed)</span></li>
           
         </ul>
-        <h3>📸 Screenshot</h3><img src="tc_03_checking_checkout_page_inputs_screenshot.png" width="600" />
+        
         <h3>🎥 Video</h3><video src="tc_03_checking_checkout_page_inputs_video.webm" width="600" controls></video>
       </body>
     </html>
