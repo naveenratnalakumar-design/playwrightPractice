@@ -22,7 +22,7 @@ jobs:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
       - name: Run Playwright tests
-        run: npx playwright test --reporter=json
+        run: npx playwright test ./tests/SwagLabs.spec.js
 
       - name: Generate Test Summary Table
         if: always()
