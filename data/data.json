@@ -1,0 +1,21 @@
+{
+    "LoginPageErrorMessages":{
+        "error":"Epic sadface: Username and password do not match any user in this service"
+    },
+    "checkOutPageErrors":{
+        "firstNameError":"Error: First Name is required",
+        "lasrNameError":"Error: Last Name is required",
+        "zipcodeError":"Error: Postal Code is required"
+    },
+    "fillteringProducts":[
+        "Name (Z to A)",
+        "Price (low to high)",
+        "Price (high to low)"
+    ],
+    "navigationOptions":[
+        "All Items",
+        "About",
+        "Logout",
+        "Reset App State"
+    ]
+}

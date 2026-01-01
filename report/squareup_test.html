@@ -1,0 +1,60 @@
+
+    <html>
+      <head>
+        <title>Squareup test</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+          }
+          h2, h3 {
+            color: #444;
+          }
+          ul {
+            padding-left: 20px;
+          }
+          li {
+            margin-bottom: 8px;
+          }
+          a {
+            text-decoration: none;
+            color: #007bff;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+        </style>
+      </head>
+      <body>
+        <h2>Squareup test</h2>
+        <a href="index.html">⬅️ Back to Summary</a>
+        
+        <h3>📝 Steps:</h3>
+        <ul>
+          
+            <li>page.goto(https://app.squareup.com/login?lang_code=en-us) </li>
+          
+            <li>locator.fill(//label[text()='Email or phone number']) </li>
+          
+            <li>locator.click(//market-button[text()='Continue']) </li>
+          
+            <li>locator.fill(input#password) </li>
+          
+            <li>locator.click(market-button[data-testid='login-password-submit-button']) </li>
+          
+            <li>locator.click(//market-button[text()='Remind me next time']) </li>
+          
+            <li>locator.click(//market-button[text()='Continue to Square']) </li>
+          
+            <li>expect.toHaveTitle </li>
+          
+            <li>locator.click(//span[text()='Take a payment']) </li>
+          
+            <li>locator.click(//div[contains(@class,'checkout-segmented-control__inner')]/market-button[2]) <span style="color:red;">(Failed)</span></li>
+          
+        </ul>
+        <h3>📸 Screenshot</h3><img src="squareup_test_screenshot.png" width="600" />
+        <h3>🎥 Video</h3><video src="squareup_test_video.webm" width="600" controls></video>
+      </body>
+    </html>
+  

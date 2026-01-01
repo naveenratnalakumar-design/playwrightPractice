@@ -1,0 +1,228 @@
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8" />
+        <title>Playwright Custom Report</title>
+        <style>
+          body { font-family: Arial, sans-serif; margin: 20px; }
+          table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+          th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+          th { background-color: #f4f4f4; }
+          tr.passed { background-color: #e0ffe0; }
+          tr.failed { background-color: #ffe0e0; }
+          tr.skipped { background-color: #f0f0f0; }
+          .scenario-detail { margin-bottom: 40px; }
+          .error { color: red; }
+          canvas { max-width: 500px; margin-top: 20px; }
+        </style>
+      </head>
+      <body>
+        <h1>Test Report</h1>
+        <p><strong>Started:</strong> Tue Jul 22 2025 11:28:57 GMT+0530 (India Standard Time)</p>
+        <p><strong>Total:</strong> 8 | ✅ Passed: 7 | ❌ Failed: 1 | ⏭ Skipped: 0</p>
+
+        <canvas id="pieChart"></canvas>
+        <canvas id="barChart"></canvas>
+
+        <h2>Test Scenario Summary</h2>
+        <table>
+          <thead>
+            <tr><th>Scenario Name</th><th>Status</th><th>Duration</th><th>Failure Reason</th></tr>
+          </thead>
+          <tbody>
+      <tr class="passed">
+        <td><a href="#scenario-0">TC_01_Login with Invalid credentials</a></td>
+        <td>passed</td>
+        <td>3.15s</td>
+        <td>—</td>
+      </tr>
+    
+      <tr class="passed">
+        <td><a href="#scenario-1">TC_02_Login with valid credentials</a></td>
+        <td>passed</td>
+        <td>2.61s</td>
+        <td>—</td>
+      </tr>
+    
+      <tr class="failed">
+        <td><a href="#scenario-2">TC_03_Checking Checkout page Inputs</a></td>
+        <td>failed</td>
+        <td>2.20s</td>
+        <td>TypeError: zipcode is required error message should have text<br><br>(0 , _expectBundle.EXPECTED_COLOR) is not a function</td>
+      </tr>
+    
+      <tr class="passed">
+        <td><a href="#scenario-3">TC_04_user order require product in the application</a></td>
+        <td>passed</td>
+        <td>3.41s</td>
+        <td>—</td>
+      </tr>
+    
+      <tr class="passed">
+        <td><a href="#scenario-4">TC_05_Remove cart Item</a></td>
+        <td>passed</td>
+        <td>2.49s</td>
+        <td>—</td>
+      </tr>
+    
+      <tr class="passed">
+        <td><a href="#scenario-5">TC_06_Filtering by product</a></td>
+        <td>passed</td>
+        <td>7.38s</td>
+        <td>—</td>
+      </tr>
+    
+      <tr class="passed">
+        <td><a href="#scenario-6">TC_07_Verifying navbar options in swagLabs home page</a></td>
+        <td>passed</td>
+        <td>1.86s</td>
+        <td>—</td>
+      </tr>
+    
+      <tr class="passed">
+        <td><a href="#scenario-7">TC_08_Logout SwagLabs Application</a></td>
+        <td>passed</td>
+        <td>2.29s</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+        </table>
+
+        <h2>Scenario Details</h2>
+        
+      <div id="scenario-0" class="scenario-detail">
+        <h3>TC_01_Login with Invalid credentials</h3>
+        <p><strong>Status:</strong> passed</p>
+        <p><strong>Duration:</strong> 3.15s</p>
+        
+        <ul>
+          <li>Before Hooks - 551ms </li><li>Open the SwagLab login page https://www.saucedemo.com/v1/ - 399ms </li><li>Enter the username in the username field. Username - 52ms </li><li>Enter the username in the username field. password - 44ms </li><li>click on the login button - 46ms </li><li>page.waitForTimeout - 2004ms </li><li>Username and password do not match should be visible - 11ms </li><li>After Hooks - 339ms </li>
+        </ul>
+        
+        
+      </div>
+    
+      <div id="scenario-1" class="scenario-detail">
+        <h3>TC_02_Login with valid credentials</h3>
+        <p><strong>Status:</strong> passed</p>
+        <p><strong>Duration:</strong> 2.61s</p>
+        
+        <ul>
+          <li>Before Hooks - 199ms </li><li>Open the SwagLab login page https://www.saucedemo.com/v1/ - 923ms </li><li>Enter the username in the username field. standard_user - 41ms </li><li>Enter the username in the username field. secret_sauce - 32ms </li><li>click on the login button - 136ms </li><li>After Hooks - 1282ms </li>
+        </ul>
+        
+        
+      </div>
+    
+      <div id="scenario-2" class="scenario-detail">
+        <h3>TC_03_Checking Checkout page Inputs</h3>
+        <p><strong>Status:</strong> failed</p>
+        <p><strong>Duration:</strong> 2.20s</p>
+        <p class="error"><strong>Failed Reason:</strong> TypeError: zipcode is required error message should have text<br><br>(0 , _expectBundle.EXPECTED_COLOR) is not a function</p>
+        <ul>
+          <li>Before Hooks - 223ms </li><li>Open the SwagLab login page https://www.saucedemo.com/v1/ - 357ms </li><li>Enter the username in the username field. standard_user - 31ms </li><li>Enter the username in the username field. secret_sauce - 33ms </li><li>click on the login button - 110ms </li><li>click on the addToCart button - 86ms </li><li>click on the cartIcon button - 225ms </li><li>click on the checkout button - 518ms </li><li>filling lastName Hane - 30ms </li><li>filling lastName 17339 - 47ms </li><li>click on the continue button - 48ms </li><li>First Name is required error message should have text - 10ms </li><li>locator.clear(//input[@id='last-name']) - 35ms </li><li>filling firstName Aida - 35ms </li><li>filling lastName 17339 - 29ms </li><li>click on the continue button - 51ms </li><li>Last Name is required error message should have text - 6ms </li><li>filling firstName Aida - 27ms </li><li>filling lastName Hane - 34ms </li><li>locator.clear(//input[@id='postal-code']) - 28ms </li><li>click on the continue button - 43ms </li><li>zipcode is required error message should have text - 0ms <span class="error">❌ TypeError: zipcode is required error message should have text
+
+(0 , _expectBundle.EXPECTED_COLOR) is not a function</span></li><li>After Hooks - 175ms </li><li>Worker Cleanup - 192ms </li>
+        </ul>
+        <p><a href="C:\Users\KeshavaRaoKarri\Desktop\Playwright_Practice\test-results\SwagLabs-TC-03-Checking-Checkout-page-Inputs-chromium\test-failed-1.png" target="_blank">📸 View Screenshot</a></p>
+        <p><a href="C:\Users\KeshavaRaoKarri\Desktop\Playwright_Practice\test-results\SwagLabs-TC-03-Checking-Checkout-page-Inputs-chromium\video.webm" target="_blank">🎥 View Video</a></p>
+      </div>
+    
+      <div id="scenario-3" class="scenario-detail">
+        <h3>TC_04_user order require product in the application</h3>
+        <p><strong>Status:</strong> passed</p>
+        <p><strong>Duration:</strong> 3.41s</p>
+        
+        <ul>
+          <li>Before Hooks - 567ms </li><li>Open the SwagLab login page https://www.saucedemo.com/v1/ - 851ms </li><li>Enter the username in the username field. standard_user - 58ms </li><li>Enter the username in the username field. secret_sauce - 40ms </li><li>click on the login button - 143ms </li><li>click on the addToCart button - 165ms </li><li>click on the cartIcon button - 243ms </li><li>click on the checkout button - 159ms </li><li>filling firstName Bonnie - 28ms </li><li>filling lastName Kemmer - 50ms </li><li>filling lastName 67146 - 33ms </li><li>click on the continue button - 333ms </li><li>click on the finish button - 435ms </li><li>After Hooks - 593ms </li>
+        </ul>
+        
+        
+      </div>
+    
+      <div id="scenario-4" class="scenario-detail">
+        <h3>TC_05_Remove cart Item</h3>
+        <p><strong>Status:</strong> passed</p>
+        <p><strong>Duration:</strong> 2.49s</p>
+        
+        <ul>
+          <li>Before Hooks - 227ms </li><li>Open the SwagLab login page https://www.saucedemo.com/v1/ - 648ms </li><li>Enter the username in the username field. standard_user - 38ms </li><li>Enter the username in the username field. secret_sauce - 35ms </li><li>click on the login button - 123ms </li><li>click on the addToCart button - 80ms </li><li>click on the cartIcon button - 311ms </li><li>click on the removeCart button - 78ms </li><li>click on the continue Shopping button - 64ms </li><li>After Hooks - 882ms </li>
+        </ul>
+        
+        
+      </div>
+    
+      <div id="scenario-5" class="scenario-detail">
+        <h3>TC_06_Filtering by product</h3>
+        <p><strong>Status:</strong> passed</p>
+        <p><strong>Duration:</strong> 7.38s</p>
+        
+        <ul>
+          <li>Before Hooks - 205ms </li><li>Open the SwagLab login page https://www.saucedemo.com/v1/ - 410ms </li><li>Enter the username in the username field. standard_user - 55ms </li><li>Enter the username in the username field. secret_sauce - 50ms </li><li>click on the login button - 186ms </li><li>page.waitForTimeout - 2013ms </li><li>locator.selectOption(//select[@class='product_sort_container']) - 24ms </li><li>page.waitForTimeout - 2015ms </li><li>locator.selectOption(//select[@class='product_sort_container']) - 12ms </li><li>page.waitForTimeout - 2010ms </li><li>locator.selectOption(//select[@class='product_sort_container']) - 17ms </li><li>After Hooks - 374ms </li>
+        </ul>
+        
+        
+      </div>
+    
+      <div id="scenario-6" class="scenario-detail">
+        <h3>TC_07_Verifying navbar options in swagLabs home page</h3>
+        <p><strong>Status:</strong> passed</p>
+        <p><strong>Duration:</strong> 1.86s</p>
+        
+        <ul>
+          <li>Before Hooks - 204ms </li><li>Open the SwagLab login page https://www.saucedemo.com/v1/ - 392ms </li><li>Enter the username in the username field. standard_user - 40ms </li><li>Enter the username in the username field. secret_sauce - 48ms </li><li>click on the login button - 138ms </li><li>click on the menuIcon button - 76ms </li><li>expect.toHaveText - 10ms </li><li>expect.toHaveText - 8ms </li><li>expect.toHaveText - 3ms </li><li>expect.toHaveText - 6ms </li><li>After Hooks - 927ms </li>
+        </ul>
+        
+        
+      </div>
+    
+      <div id="scenario-7" class="scenario-detail">
+        <h3>TC_08_Logout SwagLabs Application</h3>
+        <p><strong>Status:</strong> passed</p>
+        <p><strong>Duration:</strong> 2.29s</p>
+        
+        <ul>
+          <li>Before Hooks - 196ms </li><li>Open the SwagLab login page https://www.saucedemo.com/v1/ - 410ms </li><li>Enter the username in the username field. standard_user - 39ms </li><li>Enter the username in the username field. secret_sauce - 22ms </li><li>click on the login button - 212ms </li><li>click on the menuIcon button - 51ms </li><li>click on the logout button - 1152ms </li><li>After Hooks - 207ms </li>
+        </ul>
+        
+        
+      </div>
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          const pieCtx = document.getElementById('pieChart').getContext('2d');
+          const barCtx = document.getElementById('barChart').getContext('2d');
+
+          new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+              labels: ['Passed', 'Failed', 'Skipped'],
+              datasets: [{
+                data: [7, 1, 0],
+                backgroundColor: ['green', 'red', 'gray'],
+              }]
+            }
+          });
+
+          new Chart(barCtx, {
+            type: 'bar',
+            data: {
+              labels: ['Passed', 'Failed', 'Skipped'],
+              datasets: [{
+                label: 'Test Results',
+                data: [7, 1, 0],
+                backgroundColor: ['green', 'red', 'gray'],
+              }]
+            },
+            options: {
+              scales: {
+                y: { beginAtZero: true }
+              }
+            }
+          });
+        </script>
+      </body>
+      </html>
+    

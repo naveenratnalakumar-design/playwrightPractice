@@ -1,0 +1,570 @@
+{
+    "pageNo": 1,
+    "requestedPageSize": 140,
+    "totalElements": 140,
+    "totalPages": 1,
+    "currentPageSize": 140,
+    "message": "Data fetched successfully",
+    "items": [
+        {
+            "name": "Abimegender",
+            "code": "YC-6634056214"
+        },
+        {
+            "name": "Aerogender",
+            "code": "YC-9116767633"
+        },
+        {
+            "name": "Afab",
+            "code": "YC6985138126"
+        },
+        {
+            "name": "Affectugender",
+            "code": "YC-5408412955"
+        },
+        {
+            "name": "Agender",
+            "code": "YC8076846633"
+        },
+        {
+            "name": "Agenderflux",
+            "code": "YC-0477340383"
+        },
+        {
+            "name": "Alexigender",
+            "code": "YC-9149409656"
+        },
+        {
+            "name": "Aliusgender",
+            "code": "YC-7117895417"
+        },
+        {
+            "name": "Alliagender",
+            "code": "YC-4653467699"
+        },
+        {
+            "name": "Amab",
+            "code": "YC-2608980972"
+        },
+        {
+            "name": "Amaregender",
+            "code": "YC-4353714663"
+        },
+        {
+            "name": "Ambigender",
+            "code": "YC-5651595346"
+        },
+        {
+            "name": "Ambonec",
+            "code": "YC-0365746186"
+        },
+        {
+            "name": "Amicagender",
+            "code": "YC-8096489764"
+        },
+        {
+            "name": "Androgyne",
+            "code": "YC-4519763142"
+        },
+        {
+            "name": "Anesigender",
+            "code": "YC-1486706860"
+        },
+        {
+            "name": "Angenital",
+            "code": "YC-5322001313"
+        },
+        {
+            "name": "Anogender",
+            "code": "YC-8747541980"
+        },
+        {
+            "name": "Anongender",
+            "code": "YC-6614644611"
+        },
+        {
+            "name": "Antegender",
+            "code": "YC-2074703683"
+        },
+        {
+            "name": "Anxiegender",
+            "code": "YC-2791811358"
+        },
+        {
+            "name": "Apagender",
+            "code": "YC-5218999476"
+        },
+        {
+            "name": "Apconsugender",
+            "code": "YC-6595146791"
+        },
+        {
+            "name": "Aporagender",
+            "code": "YC-5050296801"
+        },
+        {
+            "name": "Astergender",
+            "code": "YC-6585002913"
+        },
+        {
+            "name": "Astral gender",
+            "code": "YC-5207569793"
+        },
+        {
+            "name": "Autigender",
+            "code": "YC-9100438376"
+        },
+        {
+            "name": "Autogender",
+            "code": "YC-1530398151"
+        },
+        {
+            "name": "Axigender",
+            "code": "YC-1699698428"
+        },
+        {
+            "name": "Bigender",
+            "code": "YC-9722042721"
+        },
+        {
+            "name": "Binarism",
+            "code": "YC-6659040881"
+        },
+        {
+            "name": "Biogender",
+            "code": "YC-2470068600"
+        },
+        {
+            "name": "Bissu",
+            "code": "YC-0737673260"
+        },
+        {
+            "name": "Blurgender",
+            "code": "YC-2684255917"
+        },
+        {
+            "name": "Boi",
+            "code": "YC-7168528834"
+        },
+        {
+            "name": "Boyflux",
+            "code": "YC-3930912725"
+        },
+        {
+            "name": "Burstgender",
+            "code": "YC-3444874787"
+        },
+        {
+            "name": "Butch",
+            "code": "YC-2232028527"
+        },
+        {
+            "name": "Bxyflux",
+            "code": "YC-8716873310"
+        },
+        {
+            "name": "Caelgender",
+            "code": "YC-5374570480"
+        },
+        {
+            "name": "Calabai",
+            "code": "YC-2149062795"
+        },
+        {
+            "name": "Calalai",
+            "code": "YC-5859736749"
+        },
+        {
+            "name": "Cassflux",
+            "code": "YC-8821438322"
+        },
+        {
+            "name": "Cassgender",
+            "code": "YC-4236386356"
+        },
+        {
+            "name": "Cavusgender",
+            "code": "YC-0276278250"
+        },
+        {
+            "name": "Cendgender",
+            "code": "YC-9061428175"
+        },
+        {
+            "name": "Ceterofluid",
+            "code": "YC-3098715017"
+        },
+        {
+            "name": "Ceterogender",
+            "code": "YC-4408622330"
+        },
+        {
+            "name": "Cisgender",
+            "code": "YC6069598489"
+        },
+        {
+            "name": "Cisnormative",
+            "code": "YC5534830710"
+        },
+        {
+            "name": "Cloudgender",
+            "code": "YC-5323780315"
+        },
+        {
+            "name": "Collgender",
+            "code": "YC-0523627110"
+        },
+        {
+            "name": "Colorgender",
+            "code": "YC-8599325035"
+        },
+        {
+            "name": "Commogender",
+            "code": "YC-6109324668"
+        },
+        {
+            "name": "Condigender",
+            "code": "YC-8816545060"
+        },
+        {
+            "name": "Deliciagender",
+            "code": "YC-6516232555"
+        },
+        {
+            "name": "Demiboy",
+            "code": "YC-5665562942"
+        },
+        {
+            "name": "Demiboyflux",
+            "code": "YC-9101331828"
+        },
+        {
+            "name": "Demifluid",
+            "code": "YC-9190754242"
+        },
+        {
+            "name": "Demiflux",
+            "code": "YC-7035172964"
+        },
+        {
+            "name": "Demigender",
+            "code": "YC-9380857559"
+        },
+        {
+            "name": "Demigirl",
+            "code": "YC-8595187207"
+        },
+        {
+            "name": "Domgender",
+            "code": "YC-3589969800"
+        },
+        {
+            "name": "Duragender",
+            "code": "YC-3836378072"
+        },
+        {
+            "name": "Egogender",
+            "code": "YC-1085282944"
+        },
+        {
+            "name": "Enby",
+            "code": "YC-9178429558"
+        },
+        {
+            "name": "Epicene",
+            "code": "YC-1821163563"
+        },
+        {
+            "name": "Esspigender",
+            "code": "YC-9710800429"
+        },
+        {
+            "name": "Exgender",
+            "code": "YC-7425225003"
+        },
+        {
+            "name": "Existigender",
+            "code": "YC-1809229320"
+        },
+        {
+            "name": "Female-to-male transsexual (finding)",
+            "code": "YC0975167868"
+        },
+        {
+            "name": "Female-to-Male Transsexual, Self-Report",
+            "code": "YC1616346106"
+        },
+        {
+            "name": "Female, Self-Report",
+            "code": "YC9467429000"
+        },
+        {
+            "name": "Femfluid",
+            "code": "YC-4503040527"
+        },
+        {
+            "name": "Femgender",
+            "code": "YC-3246519046"
+        },
+        {
+            "name": "Feminine-of-center",
+            "code": "YC4759481869"
+        },
+        {
+            "name": "Feminine-presenting",
+            "code": "YC8775649476"
+        },
+        {
+            "name": "Femme",
+            "code": "YC-5326574246"
+        },
+        {
+            "name": "Fluidflux",
+            "code": "YC-7726317605"
+        },
+        {
+            "name": "Gemigender",
+            "code": "YC-9537099437"
+        },
+        {
+            "name": "Gender apathetic",
+            "code": "YC3194807010"
+        },
+        {
+            "name": "Gender binary",
+            "code": "YC-8241109434"
+        },
+        {
+            "name": "Gender Identity - rather not disclose",
+            "code": "YC-6307217742"
+        },
+        {
+            "name": "Gender nonconforming",
+            "code": "YC1193421733"
+        },
+        {
+            "name": "Gender Questioning",
+            "code": "YC1365426360"
+        },
+        {
+            "name": "Gender Variant",
+            "code": "YC3371138772"
+        },
+        {
+            "name": "Gender witched",
+            "code": "YC-3881907658"
+        },
+        {
+            "name": "Genderflow",
+            "code": "YC-7030374714"
+        },
+        {
+            "name": "Genderfluid",
+            "code": "YC8012365853"
+        },
+        {
+            "name": "Genderflux",
+            "code": "YC-1706935134"
+        },
+        {
+            "name": "Genderfuzz",
+            "code": "YC-1404954112"
+        },
+        {
+            "name": "Genderless",
+            "code": "YC-7797632403"
+        },
+        {
+            "name": "Genderpuck",
+            "code": "YC-3099514988"
+        },
+        {
+            "name": "Genderqueer",
+            "code": "YC2232689406"
+        },
+        {
+            "name": "Genderqueer identity",
+            "code": "YC3803813352"
+        },
+        {
+            "name": "Girlflux",
+            "code": "YC-6772887595"
+        },
+        {
+            "name": "Gray gender",
+            "code": "YC-0456896505"
+        },
+        {
+            "name": "Healgender",
+            "code": "YC-9923021462"
+        },
+        {
+            "name": "Identifies as female gender",
+            "code": "YC3052539379"
+        },
+        {
+            "name": "Identifies as male gender",
+            "code": "YC0726905810"
+        },
+        {
+            "name": "Identifying as two-spirit",
+            "code": "YC7438159880"
+        },
+        {
+            "name": "Intergender",
+            "code": "YC3542827224"
+        },
+        {
+            "name": "Intersex identity",
+            "code": "YC-1567655184"
+        },
+        {
+            "name": "Makkunrai",
+            "code": "YC-0076185062"
+        },
+        {
+            "name": "Male Gender, Self Report",
+            "code": "YC0512988934"
+        },
+        {
+            "name": "Male-to-Female Transsexual, Self-Report",
+            "code": "YC9435677407"
+        },
+        {
+            "name": "Masculine-of-center",
+            "code": "YC0519061859"
+        },
+        {
+            "name": "Masculine-presenting",
+            "code": "YC4988551912"
+        },
+        {
+            "name": "Maverique",
+            "code": "YC0666688601"
+        },
+        {
+            "name": "Mirrorgender",
+            "code": "YC-7640633132"
+        },
+        {
+            "name": "Misgender",
+            "code": "YC3278284912"
+        },
+        {
+            "name": "Multigender",
+            "code": "YC7099863687"
+        },
+        {
+            "name": "Neutral gender",
+            "code": "YC-3517895385"
+        },
+        {
+            "name": "Neutrois",
+            "code": "YC2118350643"
+        },
+        {
+            "name": "Novigender",
+            "code": "YC0976046871"
+        },
+        {
+            "name": "Null gender",
+            "code": "YC-2523384831"
+        },
+        {
+            "name": "Omnigender",
+            "code": "YC-7441843065"
+        },
+        {
+            "name": "Oroané",
+            "code": "YC-3768377700"
+        },
+        {
+            "name": "Pangender",
+            "code": "YC0686449962"
+        },
+        {
+            "name": "Polygender",
+            "code": "YC3391647049"
+        },
+        {
+            "name": "Queer (finding)",
+            "code": "YC7496075214"
+        },
+        {
+            "name": "Questioning gender identity",
+            "code": "YC3814805470"
+        },
+        {
+            "name": "Questioning identity",
+            "code": "YC9995309824"
+        },
+        {
+            "name": "Rosboyflux",
+            "code": "YC-5522919823"
+        },
+        {
+            "name": "Soft butch",
+            "code": "YC-6672053611"
+        },
+        {
+            "name": "Stone butch",
+            "code": "YC-1774236310"
+        },
+        {
+            "name": "Surgically transgendered transsexual, female-to-male",
+            "code": "YC7180414471"
+        },
+        {
+            "name": "Third gender",
+            "code": "YC9923845105"
+        },
+        {
+            "name": "Transapathetic",
+            "code": "YC-4983447716"
+        },
+        {
+            "name": "Transfeminine",
+            "code": "YC-1497664427"
+        },
+        {
+            "name": "Transgender (identity)",
+            "code": "YC-1085251620"
+        },
+        {
+            "name": "Transgender female identity",
+            "code": "YC7096596441"
+        },
+        {
+            "name": "Transgender identity",
+            "code": "YC-0918143156"
+        },
+        {
+            "name": "Transgender male identity",
+            "code": "YC6967982337"
+        },
+        {
+            "name": "Transitioning",
+            "code": "YC-1203862868"
+        },
+        {
+            "name": "Transmasculine",
+            "code": "YC2801535650"
+        },
+        {
+            "name": "Trigender",
+            "code": "YC8030066393"
+        },
+        {
+            "name": "Two-spirit",
+            "code": "YC9142489019"
+        },
+        {
+            "name": "Two-Spirit Persons",
+            "code": "YC2647893285"
+        },
+        {
+            "name": "Unsure of gender Identity",
+            "code": "YC-8398478751"
+        }
+    ]
+}
