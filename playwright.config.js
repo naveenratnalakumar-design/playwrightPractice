@@ -21,7 +21,10 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   // Reporter configuration
-reporter: [["html"]],
+ reporter: [
+    ['json', { outputFile: 'playwright-report.json' }],
+    ['html']
+  ],
   use: {
     // Collect trace only when retrying a failed test
     trace: 'on-first-retry',
