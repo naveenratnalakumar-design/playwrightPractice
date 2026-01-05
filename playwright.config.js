@@ -26,9 +26,9 @@ reporter: [["html"]],
     // Collect trace only when retrying a failed test
     trace: 'on-first-retry',
     // baseURL: 'http://127.0.0.1:3000',
-    video:"retain-on-failure",
-    screenshot:"only-on-failure"
-    headless:ture
+    video: 'retain-on-failure',
+    screenshot: 'only-on-failure',
+    headless: true,
   },
 
   // Projects for different browsers
