@@ -1,4 +1,4 @@
-name: playwright Automated Tests
+name: Apex Automated Tests
 
 on:
   workflow_dispatch:
@@ -33,7 +33,7 @@ jobs:
           echo "| Test File | Test Case Name | Status | Duration (sec) |" >> $GITHUB_STEP_SUMMARY
           echo "| --------- | -------------- | ------ | -------------- |" >> $GITHUB_STEP_SUMMARY
 
-          node <<'EOF'
+          node <<'EOF' >> $GITHUB_STEP_SUMMARY
           const fs = require('fs');
 
           if (!fs.existsSync('playwright-report.json')) {
@@ -58,4 +58,4 @@ jobs:
               });
             });
           });
-          EOF >> $GITHUB_STEP_SUMMARY
+          EOF
