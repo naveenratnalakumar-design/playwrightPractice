@@ -28,6 +28,7 @@ reporter: [["html"]],
     // baseURL: 'http://127.0.0.1:3000',
     video:"retain-on-failure",
     screenshot:"only-on-failure"
+    headless:ture
   },
 
   // Projects for different browsers
