@@ -1,11 +1,11 @@
-name: Apex Automated Tests
+name: playwright Automated Tests
 
 on:
   workflow_dispatch:
 
 jobs:
   test:
-    runs-on: ubuntu-latest   # choose ONE OS
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -18,8 +18,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        env:
-          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
 
       - name: Run Playwright tests
         run: npx playwright test ./tests/SwagLabs.spec.js
