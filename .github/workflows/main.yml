@@ -1,4 +1,4 @@
-name: Apex Automated Tests
+name: playwright Automated Tests
 
 on:
   workflow_dispatch:
@@ -43,19 +43,32 @@ jobs:
 
           const report = JSON.parse(fs.readFileSync('playwright-report.json', 'utf8'));
 
-          report.suites.forEach(suite => {
-            suite.suites.forEach(fileSuite => {
-              const fileName = fileSuite.file.split('/').pop();
-              fileSuite.specs.forEach(spec => {
-                spec.tests.forEach(test => {
-                  const result = test.results[0];
-                  const status = result.status;
-                  const duration = (result.duration / 1000).toFixed(2);
-                  console.log(
-                    `| ${fileName} | ${spec.title} | ${status} | ${duration} |`
-                  );
-                });
-              });
-            });
-          });
+          function walkSuites(suites = []) {
+            for (const suite of suites) {
+              if (suite.specs) {
+                for (const spec of suite.specs) {
+                  for (const test of spec.tests || []) {
+                    const result = test.results?.[0];
+                    const status = result?.status || 'unknown';
+                    const duration = result
+                      ? (result.duration / 1000).toFixed(2)
+                      : '0.00';
+                    const fileName = spec.file
+                      ? spec.file.split('/').pop()
+                      : 'N/A';
+
+                    console.log(
+                      `| ${fileName} | ${spec.title} | ${status} | ${duration} |`
+                    );
+                  }
+                }
+              }
+
+              if (suite.suites) {
+                walkSuites(suite.suites);
+              }
+            }
+          }
+
+          walkSuites(report.suites);
           EOF
