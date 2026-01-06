@@ -23,25 +23,29 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test ./tests/SwagLabs.spec.js
+        run: npx playwright test ./tests/SwagLabs.spec.js --reporter=json
 
       - name: Generate Test Summary Table
         if: always()
         run: |
           echo "## Playwright Test Results" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "| Test File | Test Case Name | Status | Duration (sec) |" >> $GITHUB_STEP_SUMMARY
-          echo "| --------- | -------------- | ------ | -------------- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Test Case Name | Status | Duration (sec) |" >> $GITHUB_STEP_SUMMARY
+          echo "| -------------- | ------ | -------------- |" >> $GITHUB_STEP_SUMMARY
 
           node <<'EOF' >> $GITHUB_STEP_SUMMARY
           const fs = require('fs');
 
           if (!fs.existsSync('playwright-report.json')) {
-            console.log('| N/A | No report found | ❌ | 0 |');
+            console.log('| No report found | ❌ | 0 |');
             process.exit(0);
           }
 
           const report = JSON.parse(fs.readFileSync('playwright-report.json', 'utf8'));
+
+          function capitalize(word = 'unknown') {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          }
 
           function walkSuites(suites = []) {
             for (const suite of suites) {
@@ -49,16 +53,13 @@ jobs:
                 for (const spec of suite.specs) {
                   for (const test of spec.tests || []) {
                     const result = test.results?.[0];
-                    const status = result?.status || 'unknown';
+                    const status = capitalize(result?.status);
                     const duration = result
                       ? (result.duration / 1000).toFixed(2)
                       : '0.00';
-                    const fileName = spec.file
-                      ? spec.file.split('/').pop()
-                      : 'N/A';
 
                     console.log(
-                      `| ${fileName} | ${spec.title} | ${status} | ${duration} |`
+                      `| ${spec.title} | ${status} | ${duration} |`
                     );
                   }
                 }
