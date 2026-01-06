@@ -28,6 +28,7 @@ module.exports = defineConfig({
   use: {
     // Collect trace only when retrying a failed test
     trace: 'on-first-retry',
+    browserName: 'chromium',
     // baseURL: 'http://127.0.0.1:3000',
     video: 'retain-on-failure',
     screenshot: 'only-on-failure',
