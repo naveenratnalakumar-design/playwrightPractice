@@ -9,7 +9,7 @@ module.exports = defineConfig({
   timeout: 4000 * 1000, // 4000 seconds
 
   // Run tests in files sequentially
-  fullyParallel: false,
+  fullyParallel: ture,
 
   // Fail the build on CI if you accidentally left test.only
   forbidOnly: !!process.env.CI,
@@ -18,7 +18,7 @@ module.exports = defineConfig({
   retries: process.env.CI ? 2 : 0,
 
   // Run with 1 worker on CI
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 4: undefined,
 
   // Reporter configuration
  reporter: [
