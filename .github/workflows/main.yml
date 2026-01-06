@@ -23,7 +23,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test ./tests/SwagLabs.spec.js --reporter=json
+        run: npx playwright test ./tests/SwagLabs.spec.js --reporter=json > playwright-report.json
 
       - name: Generate Test Summary Table
         if: always()
