@@ -9,7 +9,7 @@ module.exports = defineConfig({
   timeout: 4000 * 1000, // 4000 seconds
 
   // Run tests in files sequentially
-  fullyParallel: ture,
+  fullyParallel: true,
 
   // Fail the build on CI if you accidentally left test.only
   forbidOnly: !!process.env.CI,
