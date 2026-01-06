@@ -1,4 +1,4 @@
-name: playwright Automated Tests
+name: Playwright Automated Tests
 
 on:
   workflow_dispatch:
@@ -6,6 +6,12 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    container:
+      image: mcr.microsoft.com/playwright:v1.41.0-jammy
+
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
     steps:
       - name: Checkout repository
@@ -23,7 +29,8 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test ./tests/SwagLabs.spec.js --reporter=json > playwright-report.json
+        run: |
+          npx playwright test ./tests/SwagLabs.spec.js --reporter=json > playwright-report.json
 
       - name: Generate Test Summary Table
         if: always()
